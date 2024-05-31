@@ -1,0 +1,33 @@
+{
+  "name": "ramengoapi",
+  "version": "1.0.0",
+  "description": "Uma API para uma aplicação web chamada RamenGo, uma plataforma para que o usuário possa montar um pedido de ramen, escolhendo os tipos de caldos e proteínas do prato.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/server.mjs",
+    "build": "tsup src --format esm",
+    "dev": "tsx watch --env-file .env src/server.ts",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/swagger": "^8.14.0",
+    "@fastify/swagger-ui": "^3.0.0",
+    "@prisma/client": "^5.14.0",
+    "fastify": "^4.27.0",
+    "fastify-type-provider-zod": "^1.2.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@types/node": "^20.12.14",
+    "prisma": "^5.14.0",
+    "tsup": "^8.0.2",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5"
+  }
+}
